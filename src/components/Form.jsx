@@ -116,21 +116,21 @@ const Form = () => {
                             <label className="block text-gray-700 text-sm font-bold-700 mb-2" for="name">
                                 Name
                             </label>
-                            <Field className="shadow appearance-none border rounded-lg border w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" name="name" placeholder="Enter your name" />
+                            <Field className={`shadow appearance-none border ${errors.name ? 'border-red-500' : 'border-gray-500'} rounded-lg w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline`} id="name" type="text" name="name" placeholder="Enter your name" />
                             {errors.name && <p className="text-red-500 text-xs italic">{errors.name}</p>}
                         </div>
                         <div className="mb-6">
                             <label className="block text-gray-700 text-sm font-bold-700 mb-2" for="email">
                                 E-Mail
                             </label>
-                            <Field className="shadow appearance-none border border-red-500 rounded-lg w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" name="email" placeholder="Enter your e-mail" />
+                            <Field className={`shadow appearance-none border ${errors.email ? 'border-red-500' : 'border-gray-500'} rounded-lg w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline`} id="email" type="email" name="email" placeholder="Enter your e-mail" />
                             {errors.email && <p className="text-red-500 text-xs italic">{errors.email}</p>}
                         </div>
                         <div className="mb-6">
                             <label className="block text-gray-700 text-sm font-bold-700 mb-2" for="phone">
                                 Phone
                             </label>
-                            <Field className="shadow appearance-none border border-red-500 rounded-lg w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="phone" type="text" name="phone" pattern="[0-9]*" placeholder="Enter your Phone Number" />
+                            <Field className={`shadow appearance-none border ${errors.phone ? 'border-red-500' : 'border-gray-500'} rounded-lg w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline`} id="phone" type="text" name="phone" pattern="[0-9]*" placeholder="Enter your Phone Number" />
                             {errors.phone && <p className="text-red-500 text-xs italic">{errors.phone}</p>}
                         </div>
                         <div className="mb-6">
@@ -138,7 +138,7 @@ const Form = () => {
                                 Message
                             </label>
                             <textarea
-                                className="shadow appearance-none border border-red-500 rounded-lg w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline border-black p-2 w-full" id="message" type="text" name="message" placeholder="Enter message" onChange={handleChange} onBlur={handleBlur} value={values.message} />
+                                className={`shadow appearance-none border ${errors.message ? 'border-red-500' : 'border-gray-500'} rounded-lg w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline`} type="text" name="message" placeholder="Enter message" onChange={handleChange} onBlur={handleBlur} value={values.message} />
                             {errors.message && <p className="text-red-500 text-xs italic">{errors.message}</p>}
                         </div>
                         <div className="flex items-center justify-between">
