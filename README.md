@@ -7,7 +7,7 @@ This documentation provides instructions for setting up and using the Contact ap
 - Clone the Contact app repository from GitHub:
    ```bash
     git clone <repository_url>
-    cd contact
+    cd Contact-Page
 
 ## 2. Installing Dependencies:
 
