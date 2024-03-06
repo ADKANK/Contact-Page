@@ -116,30 +116,30 @@ const Form = () => {
                             <label className="block text-gray-700 text-sm font-bold-700 mb-2" for="name">
                                 Name
                             </label>
-                            <Field className={`shadow appearance-none border ${errors.name ? 'border-red-500' : 'border-gray-500'} rounded-lg w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline`} id="name" type="text" name="name" placeholder="Enter your name" />
-                            {errors.name && <p className="text-red-500 text-xs italic">{errors.name}</p>}
+                            <Field className={`shadow appearance-none border ${errors.name && touched.name ? 'border-red-500' : 'border-gray-500'} rounded-lg w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline`} id="name" type="text" name="name" placeholder="Enter your name" />
+                            {errors.name && touched.name && <p className="text-red-500 text-xs italic">{errors.name}</p>}
                         </div>
                         <div className="mb-6">
                             <label className="block text-gray-700 text-sm font-bold-700 mb-2" for="email">
                                 E-Mail
                             </label>
-                            <Field className={`shadow appearance-none border ${errors.email ? 'border-red-500' : 'border-gray-500'} rounded-lg w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline`} id="email" type="email" name="email" placeholder="Enter your e-mail" />
-                            {errors.email && <p className="text-red-500 text-xs italic">{errors.email}</p>}
+                            <Field className={`shadow appearance-none border ${errors.email && touched.email ? 'border-red-500' : 'border-gray-500'} rounded-lg w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline`} id="email" type="email" name="email" placeholder="Enter your e-mail" />
+                            {errors.email && touched.email && <p className="text-red-500 text-xs italic">{errors.email}</p>}
                         </div>
                         <div className="mb-6">
                             <label className="block text-gray-700 text-sm font-bold-700 mb-2" for="phone">
                                 Phone
                             </label>
-                            <Field className={`shadow appearance-none border ${errors.phone ? 'border-red-500' : 'border-gray-500'} rounded-lg w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline`} id="phone" type="text" name="phone" pattern="[0-9]*" placeholder="Enter your Phone Number" />
-                            {errors.phone && <p className="text-red-500 text-xs italic">{errors.phone}</p>}
+                            <Field className={`shadow appearance-none border ${errors.phone && touched.phone ? 'border-red-500' : 'border-gray-500'} rounded-lg w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline`} id="phone" type="text" name="phone" pattern="[0-9]*" placeholder="Enter your Phone Number" />
+                            {errors.phone && touched.phone && <p className="text-red-500 text-xs italic">{errors.phone}</p>}
                         </div>
                         <div className="mb-6">
                             <label className="block text-gray-700 text-sm font-bold-700 mb-2" for="message">
                                 Message
                             </label>
                             <textarea
-                                className={`shadow appearance-none border ${errors.message ? 'border-red-500' : 'border-gray-500'} rounded-lg w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline`} type="text" name="message" placeholder="Enter message" onChange={handleChange} onBlur={handleBlur} value={values.message} />
-                            {errors.message && <p className="text-red-500 text-xs italic">{errors.message}</p>}
+                                className={`shadow appearance-none border ${errors.message && touched.message ? 'border-red-500' : 'border-gray-500'} rounded-lg w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline`} type="text" name="message" placeholder="Enter message" onChange={handleChange} onBlur={handleBlur} value={values.message} />
+                            {errors.message && touched.message && <p className="text-red-500 text-xs italic">{errors.message}</p>}
                         </div>
                         <div className="flex items-center justify-between">
                             <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
